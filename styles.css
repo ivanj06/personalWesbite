@@ -420,6 +420,36 @@ body {
     color: var(--text-secondary);
 }
 
+/* Affiliations Section */
+.affiliation-item {
+    align-items: flex-start;
+}
+
+.affiliation-logo {
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 60px;
+}
+
+.affiliation-logo img {
+    max-width: 120px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.affiliation-item:hover .affiliation-logo img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
 /* Contact Section */
 .contact-content {
     max-width: 600px;
