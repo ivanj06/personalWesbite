@@ -1,0 +1,592 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --text-light: #999999;
+    --bg-primary: #ffffff;
+    --bg-secondary: #fafafa;
+    --border-color: #e5e5e5;
+    --accent: #1a1a1a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo a {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    transition: opacity 0.3s ease;
+}
+
+.nav-logo a:hover {
+    opacity: 0.6;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    letter-spacing: 0.2px;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 22px;
+    height: 1.5px;
+    background-color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    padding: 140px 24px 100px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-primary);
+}
+
+.hero-container {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-content {
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero-title {
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.hero-greeting {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.hero-name {
+    display: block;
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    letter-spacing: -0.3px;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.hero-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: opacity 0.3s ease;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+.hero-link:hover {
+    opacity: 0.6;
+    border-bottom-color: var(--text-primary);
+}
+
+.separator {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* Sections */
+.section {
+    padding: 100px 0;
+}
+
+.section-alt {
+    background-color: var(--bg-secondary);
+}
+
+.section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 64px;
+}
+
+.section-number {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-light);
+    letter-spacing: 1px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -1px;
+}
+
+/* Projects List */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.project-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 48px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid var(--border-color);
+    transition: opacity 0.3s ease;
+}
+
+.project-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.project-item:hover {
+    opacity: 0.8;
+}
+
+.project-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.project-year {
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.project-category {
+    font-size: 12px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+.project-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 600px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.project-tech span {
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+.project-links {
+    display: flex;
+    gap: 24px;
+    margin-top: 8px;
+}
+
+.project-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    transition: opacity 0.3s ease;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+.project-link:hover {
+    opacity: 0.6;
+    border-bottom-color: var(--text-primary);
+}
+
+/* Certifications List */
+.certifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.cert-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cert-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.cert-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-date {
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.cert-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cert-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+}
+
+.cert-org {
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.cert-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-top: 4px;
+}
+
+.cert-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 8px;
+    transition: opacity 0.3s ease;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.cert-link:hover {
+    opacity: 0.6;
+    border-bottom-color: var(--text-primary);
+}
+
+/* Hobbies Grid */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 64px;
+}
+
+.hobby-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hobby-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+}
+
+.hobby-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+/* Contact Section */
+.contact-content {
+    max-width: 600px;
+}
+
+.contact-intro {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    transition: opacity 0.3s ease;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.contact-link:hover {
+    opacity: 0.6;
+    border-bottom-color: var(--text-primary);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-secondary);
+    padding: 48px 24px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.footer p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.footer-separator {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: left;
+        transition: 0.3s;
+        border-top: 1px solid var(--border-color);
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hero {
+        padding: 120px 24px 80px;
+        min-height: auto;
+    }
+
+    .hero-name {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .project-item,
+    .cert-item {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .project-meta,
+    .cert-meta {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .contact-links {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-name {
+        font-size: 36px;
+    }
+
+    .hero-greeting {
+        font-size: 16px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .project-title {
+        font-size: 24px;
+    }
+
+    .cert-title {
+        font-size: 20px;
+    }
+}
