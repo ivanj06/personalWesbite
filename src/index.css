@@ -11,7 +11,7 @@
     --text-light: #999999;
     --bg-primary: #ffffff;
     --bg-secondary: #fafafa;
-    --border-color: #e5e5e5;
+    --border-color: #e5e7eb;
     --accent: #1a1a1a;
 }
 
@@ -64,10 +64,23 @@ body {
     text-decoration: none;
     letter-spacing: -0.5px;
     transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .nav-logo a:hover {
     opacity: 0.6;
+}
+
+.site-logo {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: inline-block;
 }
 
 .nav-menu {
@@ -86,6 +99,10 @@ body {
 }
 
 .nav-link:hover {
+    color: var(--text-primary);
+}
+
+.nav-link.active {
     color: var(--text-primary);
 }
 
