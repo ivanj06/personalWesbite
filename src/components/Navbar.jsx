@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-const Navbar = ({ activeSection, scrollToSection }) => {
+const Navbar = ({ activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'hackathons', label: 'Hackathons' },
-    { id: 'hardware', label: 'Hardware' },
-    { id: 'certifications', label: 'Certifications' },
-    { id: 'leadership', label: 'Leadership' },
-    { id: 'affiliations', label: 'Affiliations' },
-    { id: 'hobbies', label: 'Hobbies' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'home', label: 'Home', path: '/' },
+    { id: 'projects', label: 'Projects', path: '/projects' },
+    { id: 'certifications', label: 'Certifications', path: '/certifications' },
+    { id: 'leadership', label: 'Leadership', path: '/leadership' },
+    { id: 'affiliations', label: 'Affiliations', path: '/affiliations' },
+    { id: 'hobbies', label: 'Hobbies', path: '/hobbies' },
+    { id: 'contact', label: 'Contact', path: '/contact' }
   ];
 
-  const handleNavClick = (sectionId) => {
-    scrollToSection(sectionId);
+  const handleNavClick = (path) => {
+    navigate(path);
     setIsMenuOpen(false);
   };
 
@@ -23,21 +24,21 @@ const Navbar = ({ activeSection, scrollToSection }) => {
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-logo">
-          <a href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('home'); }}>
+          <Link to="/" onClick={() => setIsMenuOpen(false)}>
             <img src="/logo.png" alt="Ivan Jauregui" className="site-logo" onError={(e) => e.target.style.display = 'none'} />
             <span className="logo-text">Ivan Jauregui</span>
-          </a>
+          </Link>
         </div>
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           {navItems.map(item => (
             <li key={item.id}>
-              <a
-                href={`#${item.id}`}
+              <Link
+                to={item.path}
                 className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
-                onClick={(e) => { e.preventDefault(); handleNavClick(item.id); }}
+                onClick={() => handleNavClick(item.path)}
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

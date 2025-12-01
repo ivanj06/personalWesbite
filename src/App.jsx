@@ -1,62 +1,40 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import HackathonProjects from './components/HackathonProjects';
-import HardwareProjects from './components/HardwareProjects';
-import Certifications from './components/Certifications';
-import Leadership from './components/Leadership';
-import Affiliations from './components/Affiliations';
-import Hobbies from './components/Hobbies';
-import Contact from './components/Contact';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import CertificationsPage from './pages/Certifications';
+import LeadershipPage from './pages/Leadership';
+import AffiliationsPage from './pages/Affiliations';
+import HobbiesPage from './pages/Hobbies';
+import ContactPage from './pages/Contact';
 import './App.css';
 
-function App() {
-  const [activeSection, setActiveSection] = useState('home');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'hackathons', 'hardware', 'certifications', 'leadership', 'affiliations', 'hobbies', 'contact'];
-      const scrollY = window.pageYOffset + 100;
-
-      sections.forEach(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const sectionTop = element.offsetTop;
-          const sectionHeight = element.offsetHeight;
-          if (scrollY > sectionTop && scrollY < sectionTop + sectionHeight) {
-            setActiveSection(section);
-          }
-        }
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offsetTop = element.offsetTop - 80;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
-      });
-    }
-  };
+function AppContent() {
+  const location = useLocation();
+  const activeSection = location.pathname === '/' ? 'home' : location.pathname.slice(1);
 
   return (
     <div className="App">
-      <Navbar activeSection={activeSection} scrollToSection={scrollToSection} />
-      <Hero />
-      <HackathonProjects />
-      <HardwareProjects />
-      <Certifications />
-      <Leadership />
-      <Affiliations />
-      <Hobbies />
-      <Contact />
+      <Navbar activeSection={activeSection} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/certifications" element={<CertificationsPage />} />
+        <Route path="/leadership" element={<LeadershipPage />} />
+        <Route path="/affiliations" element={<AffiliationsPage />} />
+        <Route path="/hobbies" element={<HobbiesPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 
