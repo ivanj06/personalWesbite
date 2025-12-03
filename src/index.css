@@ -436,6 +436,32 @@ body {
     margin-top: 4px;
 }
 
+.work-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.work-bullet {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 600px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.work-bullet::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
 .cert-link {
     color: var(--text-primary);
     text-decoration: none;

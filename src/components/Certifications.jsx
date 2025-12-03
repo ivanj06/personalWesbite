@@ -7,7 +7,7 @@ const Certifications = () => {
       title: 'HPE Client Team Lead + Junior Developer',
       org: 'Hewlett Packard Enterprise',
       description: 'Leadership and development certifications demonstrating expertise in managing client relationships, leading technical teams, and delivering enterprise solutions. Validates foundational skills in software engineering, programming, and enterprise application development.',
-      link: '#'
+      link: 'https://schoolcerts.ext.hpe.com/cert/9084'
     },
     {
       date: '2024',

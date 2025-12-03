@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import CertificationsPage from './pages/Certifications';
 import LeadershipPage from './pages/Leadership';
+import WorkPage from './pages/Work';
 import AffiliationsPage from './pages/Affiliations';
 import HobbiesPage from './pages/Hobbies';
 import ContactPage from './pages/Contact';
@@ -22,6 +23,7 @@ function AppContent() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/certifications" element={<CertificationsPage />} />
         <Route path="/leadership" element={<LeadershipPage />} />
+        <Route path="/work" element={<WorkPage />} />
         <Route path="/affiliations" element={<AffiliationsPage />} />
         <Route path="/hobbies" element={<HobbiesPage />} />
         <Route path="/contact" element={<ContactPage />} />

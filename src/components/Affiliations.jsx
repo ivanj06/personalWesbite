@@ -15,20 +15,15 @@ const Affiliations = () => {
     {
       name: 'HeadStart',
       logo: '/logos/headstart-logo.png',
-      description: 'Early childhood education and development program focused on preparing children for success in school and life.'
+      description: "A 500+ fellow fellowship based out of the US empowering students to achieve their career goals, in Tech, Consulting, and Finance. Fellows have gone on to join teams at Uber, Google, Meta, Goldman Sachs, McKinsey, Bain, Coinbase, Boston Consulting Group (BCG), Microsoft & more!"
     },
     {
-      name: 'MLT CP',
+      name: "MLT Career Prep '28",
       logo: '/logos/mlt-logo.png',
       description: 'Management Leadership for Tomorrow Career Prep - Career development and leadership program for high-achieving people of color.'
     },
     {
-      name: 'ACM',
-      logo: '/logos/acm-logo.png',
-      description: 'Association for Computing Machinery - Professional organization for computing professionals and students.'
-    },
-    {
-      name: 'LEAD First-Gen Scholar',
+      name: 'LEAD First-Gen Scholars Program',
       logo: '/logos/lead-logo.png',
       description: 'LEAD Scholars Program - Supporting first-generation college students through mentorship and academic resources.'
     },
