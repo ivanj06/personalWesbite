@@ -3,19 +3,11 @@ import React from 'react';
 const HardwareProjects = () => {
   const projects = [
     {
-      year: '2024',
+      year: '2025',
       category: 'Hardware',
-      title: 'TreasureBox',
-      description: 'A secure hardware storage solution with integrated electronics. Designed and implemented circuit design, component selection, and embedded system programming to create a functional and reliable hardware device.',
-      tech: ['Circuit Design', 'Embedded Systems', 'Hardware Prototyping'],
-      links: { documentation: '#', video: '#' }
-    },
-    {
-      year: '2024',
-      category: 'Hardware',
-      title: 'PCB Placeholder',
-      description: 'Custom printed circuit board design project. Involved schematic design, PCB layout, component placement, routing, and board fabrication. Demonstrates expertise in electronic design and manufacturing processes.',
-      tech: ['PCB Design', 'Schematic Capture', 'Board Layout'],
+      title: 'Automated Mother\'s Day Gift Box - SCU Robotics Showcase',
+      description: 'Coordinated with the multidisciplinary team to create an automated Mother\'s Day gift box. Deployed C++ functions on an Arduino for photoresistor object detection and closing mechanism. Designed and implemented an electrical wiring to interconnect the wooden frame with components.',
+      tech: ['Arduino', 'C++', 'Circuit Design', 'Photoresistor', 'Embedded Systems'],
       links: { documentation: '#', video: '#' }
     }
   ];

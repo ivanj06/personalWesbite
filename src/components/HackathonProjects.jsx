@@ -3,43 +3,27 @@ import React from 'react';
 const HackathonProjects = () => {
   const projects = [
     {
-      year: '2024',
+      year: '2025',
       category: 'Hackathon',
-      title: 'SafeMap SJ',
-      description: 'A safety mapping application for San Jose that helps users identify and navigate safe routes through the city. Built to address urban safety concerns and provide real-time safety data visualization.',
-      tech: ['Web Development', 'Mapping API', 'Data Visualization'],
+      title: 'License Plate Detector - Intel Tiber Hackathon',
+      description: 'Designed a license plate detector to address the inefficient permit system, piloting 9500 users. Trained an OpenCV model for image pre-processing and Ultralytics YOLO for object detection, yielding 90% accuracy. Programmed API endpoints to verify license plates within our AWS DynamoDB database.',
+      tech: ['OpenCV', 'YOLO', 'AWS DynamoDB', 'RESTful API', 'Python'],
+      links: { github: '#', demo: '#' }
+    },
+    {
+      year: '2025',
+      category: 'Hackathon',
+      title: 'Version Control System - Adobe Express AI Hackathon',
+      description: 'Guided by employee complaints, we overhauled the version control via multi-user save states and a visual changes UI. Deployed RESTful API calls to AWS, stored metadata for downloadable rollbacks, and multi-user workflows. Recognized by 12 professionals amongst 100+ participants to pitch our team project for further funding. Award: 2nd Overall.',
+      tech: ['AWS', 'RESTful API', 'Version Control', 'Multi-user Systems'],
       links: { github: '#', demo: '#' }
     },
     {
       year: '2024',
       category: 'Hackathon',
-      title: 'Checkpoint',
-      description: 'A security and verification system designed to enhance safety protocols. Developed to streamline checkpoint processes and improve security measures through innovative technology solutions.',
-      tech: ['Security Systems', 'Hardware Integration', 'Real-time Processing'],
-      links: { github: '#', demo: '#' }
-    },
-    {
-      year: '2024',
-      category: 'Hackathon',
-      title: 'Parkd',
-      description: 'A smart parking solution that helps users find available parking spaces in real-time. Designed to reduce parking frustration and optimize urban parking infrastructure.',
-      tech: ['Mobile App', 'IoT Sensors', 'Location Services'],
-      links: { github: '#', demo: '#' }
-    },
-    {
-      year: '2024',
-      category: 'Hackathon',
-      title: 'CitySync',
-      description: 'An urban synchronization platform that connects city services, transportation, and residents. Built to improve city-wide coordination and enhance the urban living experience through integrated technology.',
-      tech: ['Full Stack', 'API Integration', 'City Services'],
-      links: { github: '#', demo: '#' }
-    },
-    {
-      year: '2023',
-      category: 'Hackathon',
-      title: 'Third Place',
-      description: 'A community platform designed to create and discover third places—social spaces beyond home and work. Focused on building stronger community connections and fostering local engagement.',
-      tech: ['Social Platform', 'Community Features', 'Location-Based'],
+      title: 'Safety Heatmap - AWS x INRIX Hackathon',
+      description: 'Tackled growing San Jose safety concern through assessing 220 neighborhoods on an interactive heatmap. Optimized AI prompts for Claude 3 Sonnet-generated scores, constructed a scalable system for future expansion. Engineered current & future prediction scores into S3 buckets to increase resident safety awareness. Drove product vision and team ideation; led project pitch rounds to 20 industry judges and 350+ participants. Award: 2nd Best Use of Responsible AI.',
+      tech: ['AWS S3', 'Claude 3 Sonnet', 'Data Visualization', 'AI/ML', 'Heatmap'],
       links: { github: '#', demo: '#' }
     }
   ];

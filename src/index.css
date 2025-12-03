@@ -536,13 +536,20 @@ body {
     transition: opacity 0.3s ease;
     border-bottom: 1px solid transparent;
     padding-bottom: 2px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
     width: fit-content;
 }
 
 .contact-link:hover {
     opacity: 0.6;
     border-bottom-color: var(--text-primary);
+}
+
+.contact-icon {
+    font-size: 20px;
+    flex-shrink: 0;
 }
 
 /* Footer */

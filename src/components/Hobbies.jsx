@@ -4,11 +4,11 @@ const Hobbies = () => {
   const hobbies = [
     {
       title: 'Drone Photography',
-      description: 'Capturing stunning aerial perspectives and landscapes through drone photography. Exploring the intersection of technology and creative visual storytelling from above.'
+      description: "To take a break from screens means getting a bird's eye perspective of the world! My DJI Mini 3 Pro is my main companion to parks and outdoor adventures."
     },
     {
       title: 'Swimming',
-      description: 'Staying active and maintaining fitness through swimming. Enjoying the meditative rhythm of the water and the physical challenge of the sport.'
+      description: '200m IM Team Relays. 100m Backstroke. 50m Freestyle. 6am Winter Practices. 1 Varsity Swimmer. This sport has not only shaped my body, but my mind and pain tolerance too!'
     }
   ];
 

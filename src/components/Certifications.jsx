@@ -3,17 +3,24 @@ import React from 'react';
 const Certifications = () => {
   const certifications = [
     {
-      date: 'August 2024',
-      title: 'Junior Developer',
+      date: '2025',
+      title: 'HPE Client Team Lead + Junior Developer',
       org: 'Hewlett Packard Enterprise',
-      description: 'Development certification validating foundational skills in software engineering, programming, and enterprise application development.',
+      description: 'Leadership and development certifications demonstrating expertise in managing client relationships, leading technical teams, and delivering enterprise solutions. Validates foundational skills in software engineering, programming, and enterprise application development.',
       link: '#'
     },
     {
-      date: 'March 2025',
-      title: 'Client Team Lead',
-      org: 'Hewlett Packard Enterprise',
-      description: 'Leadership certification demonstrating expertise in managing client relationships, leading technical teams, and delivering enterprise solutions.',
+      date: '2024',
+      title: 'CompTIA ITF+',
+      org: 'CompTIA',
+      description: 'IT Fundamentals certification validating foundational knowledge in IT concepts, infrastructure, applications, software development, and database fundamentals.',
+      link: '#'
+    },
+    {
+      date: '2024',
+      title: 'CodePath TIP 102',
+      org: 'CodePath',
+      description: 'Technical Interview Prep certification demonstrating proficiency in data structures, algorithms, and technical interview preparation.',
       link: '#'
     }
   ];
@@ -23,7 +30,7 @@ const Certifications = () => {
       <div className="container">
         <div className="section-header">
           <span className="section-number">03</span>
-          <h2 className="section-title">HPE Certifications</h2>
+          <h2 className="section-title">Certifications</h2>
         </div>
         <div className="certifications-list">
           {certifications.map((cert, index) => (
