@@ -17,7 +17,7 @@ const Hero = () => {
             <div className="hero-links">
               <a href="tel:+19168075462" className="hero-link">(916) 807-5462</a>
               <span className="separator">/</span>
-              <a href="mailto:ivanjauregui85@gmail.com" className="hero-link">Email</a>
+              <a href="mailto:ivanejauregui@gmail.com" className="hero-link">Email</a>
               <span className="separator">/</span>
               <a href="https://www.linkedin.com/in/ivanjauregui" className="hero-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <span className="separator">/</span>

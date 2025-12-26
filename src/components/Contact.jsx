@@ -18,9 +18,9 @@ const Contact = () => {
               <FaPhone className="contact-icon" />
               <span>(916) 807-5462</span>
             </a>
-            <a href="mailto:ivanjauregui85@gmail.com" className="contact-link">
+            <a href="mailto:ivanejauregui@gmail.com" className="contact-link">
               <FaEnvelope className="contact-icon" />
-              <span>ivanjauregui85@gmail.com</span>
+              <span>ivanejauregui@gmail.com</span>
             </a>
             <a href="https://www.linkedin.com/in/ivanjauregui" className="contact-link" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="contact-icon" />
