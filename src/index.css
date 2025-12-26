@@ -75,8 +75,10 @@ body {
 
 .site-logo {
     height: 32px;
-    width: auto;
-    object-fit: contain;
+    width: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
 }
 
 .logo-text {

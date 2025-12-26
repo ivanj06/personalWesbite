@@ -26,7 +26,7 @@ const Navbar = ({ activeSection }) => {
       <div className="nav-container">
         <div className="nav-logo">
           <Link to="/" onClick={() => setIsMenuOpen(false)}>
-            <img src="/logo.png" alt="Ivan Jauregui" className="site-logo" onError={(e) => e.target.style.display = 'none'} />
+            <img src="/headshot.jpg" alt="Ivan Jauregui" className="site-logo" onError={(e) => e.target.style.display = 'none'} />
             <span className="logo-text">Ivan Jauregui</span>
           </Link>
         </div>
