@@ -6,6 +6,7 @@
 }
 
 :root {
+    color-scheme: light;
     --text-primary: #1a1a1a;
     --text-secondary: #666666;
     --text-light: #999999;
@@ -13,6 +14,23 @@
     --bg-secondary: #fafafa;
     --border-color: #e5e7eb;
     --accent: #1a1a1a;
+    --nav-bg: rgba(255, 255, 255, 0.8);
+    --nav-menu-mobile-bg: #ffffff;
+    --hero-image-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] {
+    color-scheme: dark;
+    --text-primary: #f0f0f0;
+    --text-secondary: #a8a8a8;
+    --text-light: #777777;
+    --bg-primary: #121212;
+    --bg-secondary: #1a1a1a;
+    --border-color: #2d2d2d;
+    --accent: #f0f0f0;
+    --nav-bg: rgba(18, 18, 18, 0.85);
+    --nav-menu-mobile-bg: var(--bg-primary);
+    --hero-image-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
 }
 
 html {
@@ -40,7 +58,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--nav-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
@@ -108,6 +126,37 @@ body {
     color: var(--text-primary);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--bg-secondary);
+    opacity: 1;
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -161,7 +210,7 @@ body {
     height: auto;
     border-radius: 12px;
     object-fit: cover;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--hero-image-shadow);
     transition: transform 0.3s ease;
 }
 
@@ -630,7 +679,7 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: white;
+        background-color: var(--nav-menu-mobile-bg);
         width: 100%;
         text-align: left;
         transition: 0.3s;

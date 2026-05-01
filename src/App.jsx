@@ -9,6 +9,7 @@ import WorkPage from './pages/Work';
 import AffiliationsPage from './pages/Affiliations';
 import HobbiesPage from './pages/Hobbies';
 import ContactPage from './pages/Contact';
+import { ThemeProvider } from './context/ThemeContext';
 import './App.css';
 
 function AppContent() {
@@ -34,9 +35,11 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </ThemeProvider>
   );
 }
 
