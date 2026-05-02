@@ -5,6 +5,7 @@ const Footer = () => {
   return (
     <footer className="site-footer" role="contentinfo">
       <div className="site-footer-inner">
+        <span className="site-footer-label">Contact me:</span>
         <a href="mailto:ivanejauregui@gmail.com" className="site-footer-link site-footer-link--email">
           <FaEnvelope className="site-footer-icon" aria-hidden />
           <span>ivanejauregui@gmail.com</span>
