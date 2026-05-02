@@ -14,13 +14,6 @@ const Hero = () => {
             <p className="hero-description">
               I'm a first-generation ECE student at Santa Clara University (Expected Graduation June 2028) with experience in AI/ML, AWS development, and multiple award-winning industry hackathons. I combine strong technical skills with leadership and communication experience from SHPE, HPE, and customer-facing work. I aim to work in robotics or EVs in a technical client-facing role, with long-term goals in startups.
             </p>
-            <div className="hero-links">
-              <a href="mailto:ivanejauregui@gmail.com" className="hero-link">Email</a>
-              <span className="separator">/</span>
-              <a href="https://www.linkedin.com/in/ivanjauregui" className="hero-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <span className="separator">/</span>
-              <a href="https://github.com/ivanj06" className="hero-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div>
           </div>
           <div className="hero-image-wrapper">
             <img 
