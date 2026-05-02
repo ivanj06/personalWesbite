@@ -13,8 +13,7 @@ const Navbar = ({ activeSection }) => {
     { id: 'leadership', label: 'Leadership', path: '/leadership' },
     { id: 'work', label: 'Work History', path: '/work' },
     { id: 'affiliations', label: 'Affiliations', path: '/affiliations' },
-    { id: 'hobbies', label: 'Hobbies', path: '/hobbies' },
-    { id: 'contact', label: 'Contact', path: '/contact' }
+    { id: 'hobbies', label: 'Hobbies', path: '/hobbies' }
   ];
 
   const handleNavClick = (path) => {
