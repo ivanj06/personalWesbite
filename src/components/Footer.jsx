@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="site-footer" role="contentinfo">
       <div className="site-footer-inner">
-        <a href="mailto:ivanejauregui@gmail.com" className="site-footer-link">
+        <a href="mailto:ivanejauregui@gmail.com" className="site-footer-link site-footer-link--email">
           <FaEnvelope className="site-footer-icon" aria-hidden />
           <span>ivanejauregui@gmail.com</span>
         </a>
@@ -14,7 +14,7 @@ const Footer = () => {
         </span>
         <a
           href="https://www.linkedin.com/in/ivanjauregui"
-          className="site-footer-link"
+          className="site-footer-link site-footer-link--linkedin"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -26,7 +26,7 @@ const Footer = () => {
         </span>
         <a
           href="https://github.com/ivanj06"
-          className="site-footer-link"
+          className="site-footer-link site-footer-link--github"
           target="_blank"
           rel="noopener noreferrer"
         >
