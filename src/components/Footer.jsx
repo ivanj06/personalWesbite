@@ -8,7 +8,7 @@ const Footer = () => {
         <span className="site-footer-label">Contact me:</span>
         <a href="mailto:ivanejauregui@gmail.com" className="site-footer-link site-footer-link--email">
           <FaEnvelope className="site-footer-icon" aria-hidden />
-          <span>ivanejauregui@gmail.com</span>
+          <span>ivanejauregui [at] gmail.com</span>
         </a>
         <span className="site-footer-dot" aria-hidden>
           ·

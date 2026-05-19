@@ -12,7 +12,6 @@ const Navbar = ({ activeSection }) => {
     { id: 'certifications', label: 'Certifications', path: '/certifications' },
     { id: 'leadership', label: 'Leadership', path: '/leadership' },
     { id: 'work', label: 'Work History', path: '/work' },
-    { id: 'affiliations', label: 'Affiliations', path: '/affiliations' },
     { id: 'hobbies', label: 'Hobbies', path: '/hobbies' }
   ];
 

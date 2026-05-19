@@ -1,33 +1,36 @@
 import React from 'react';
-import { FaSwimmer, FaGuitar } from 'react-icons/fa';
+import { FaSwimmer, FaGuitar, FaHiking } from 'react-icons/fa';
 import { PiDrone } from 'react-icons/pi';
-import { TbSkateboard } from 'react-icons/tb';
 
 const Hobbies = () => {
   const hobbies = [
     {
       title: 'Swimming',
+      iconVariant: 'swim',
       Icon: FaSwimmer,
       description:
-        '200m IM Team Relays. 100m Backstroke. 50m Freestyle. 6am Winter Practices. 1 Varsity Swimmer. This sport has not only shaped my body, but my mind and pain tolerance too!'
+        '200m IM Team Relays. 100m Backstroke. 50m Freestyle. 6am Winter Practices. 1 Varsity Swimmer. Thanks to the sport, I dropped 50lbs in high school.'
     },
     {
-      title: 'Drones',
+      title: 'Drone Photography',
+      iconVariant: 'drones',
       Icon: PiDrone,
       description:
-        "To take a break from screens means getting a bird's eye perspective of the world! My DJI Mini 3 Pro is my main companion to parks and outdoor adventures."
+        'With FAA Part 107 License in hand, I took my DJI Mini 3 Pro to the skies as a little recording side hustle as a teen.'
     },
     {
       title: 'Ukulele',
+      iconVariant: 'ukulele',
       Icon: FaGuitar,
       description:
-        'Small instrument, big unwind—learning chord progressions and playing for friends between study sessions and swim meets.'
+        'Learned this small little instrument to unwind and play for friends. Currently learning how to play "La Bamba" and "Happy Birthday".'
     },
     {
-      title: 'Pennyboard',
-      Icon: TbSkateboard,
+      title: 'Hiking',
+      iconVariant: 'hiking',
+      Icon: FaHiking,
       description:
-        'Compact cruiser for campus hops and quick rides—easy to carry, smooth on mellow pavement, and a fun way to clear my head.'
+        'Reaching 20, I realized the importance of the outdoors. I loved backpacking Big Sur and getting up to Yosemite.'
     }
   ];
 
@@ -36,12 +39,12 @@ const Hobbies = () => {
       <div className="container">
         <div className="section-header">
           <span className="section-number">06</span>
-          <h2 className="section-title">Hobbies & Interests</h2>
+          <h2 className="section-title">Hobbies</h2>
         </div>
         <div className="hobbies-grid">
-          {hobbies.map(({ title, description, Icon }, index) => (
+          {hobbies.map(({ title, description, Icon, iconVariant }, index) => (
             <div key={index} className="hobby-item">
-              <Icon className="hobby-icon" aria-hidden />
+              <Icon className={`hobby-icon hobby-icon--${iconVariant}`} aria-hidden />
               <h3 className="hobby-title">{title}</h3>
               <p className="hobby-description">{description}</p>
             </div>

@@ -6,7 +6,6 @@ import Projects from './pages/Projects';
 import CertificationsPage from './pages/Certifications';
 import LeadershipPage from './pages/Leadership';
 import WorkPage from './pages/Work';
-import AffiliationsPage from './pages/Affiliations';
 import HobbiesPage from './pages/Hobbies';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
@@ -26,7 +25,7 @@ function AppContent() {
           <Route path="/certifications" element={<CertificationsPage />} />
           <Route path="/leadership" element={<LeadershipPage />} />
           <Route path="/work" element={<WorkPage />} />
-          <Route path="/affiliations" element={<AffiliationsPage />} />
+          <Route path="/affiliations" element={<Navigate to="/" replace />} />
           <Route path="/hobbies" element={<HobbiesPage />} />
           <Route path="/contact" element={<Navigate to="/" replace />} />
         </Routes>

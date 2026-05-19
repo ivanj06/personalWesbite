@@ -1,4 +1,8 @@
-# Logos Directory
+# Logos (legacy note)
+
+**Create React App serves static files from `public/`, not this folder.** Affiliation images live in **`public/logos/`** (see `public/logos/README.md`).
+
+Previously this directory listed filenames for local copies:
 
 Place your affiliation logos in this directory with the following filenames:
 
@@ -16,5 +20,5 @@ Place your affiliation logos in this directory with the following filenames:
 - **Background**: Transparent backgrounds work best
 - **Fallback**: If a logo file is missing, it will be hidden automatically
 
-The logos will display in grayscale by default and become colored on hover for a subtle, professional effect.
+Logos display in full color on the Affiliations page (see `public/logos/`).
 

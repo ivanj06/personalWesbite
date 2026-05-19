@@ -6,6 +6,6 @@ A portfolio website built with React showcasing projects, certifications, and pr
 ## Author
 
 Ivan Jauregui
-- Email: ivanejauregui@gmail.com
+- Email: ivanejauregui [at] gmail.com
 - LinkedIn: [ivanjauregui](https://www.linkedin.com/in/ivanjauregui)
 - GitHub: [ivanj06](https://github.com/ivanj06)
