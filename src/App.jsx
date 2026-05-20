@@ -8,6 +8,9 @@ import LeadershipPage from './pages/Leadership';
 import WorkPage from './pages/Work';
 import HobbiesPage from './pages/Hobbies';
 import Footer from './components/Footer';
+import SkipLink from './components/SkipLink';
+import PageMeta from './components/PageMeta';
+import PlausibleAnalytics from './components/PlausibleAnalytics';
 import { ThemeProvider } from './context/ThemeContext';
 import './App.css';
 
@@ -17,8 +20,11 @@ function AppContent() {
 
   return (
     <div className="App">
+      <PageMeta />
+      <PlausibleAnalytics />
+      <SkipLink />
       <Navbar activeSection={activeSection} />
-      <main className="app-main">
+      <main id="main-content" className="app-main" tabIndex={-1}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
